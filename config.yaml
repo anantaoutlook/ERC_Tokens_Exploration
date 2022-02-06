@@ -1,0 +1,10 @@
+ethplorer: 
+     api_key: XXXXXXXXX
+     getTopTokenHolders: https://api.ethplorer.io/getTopTokenHolders/
+     getTokenInfo: https://api.ethplorer.io/getTokenInfo/
+     getAddressInfo: https://api.ethplorer.io/getAddressInfo/
+     limit: 5
+     holdings: 20
+     compareaddresses: 10000
+cryptoapis:
+     api_key: XXXXX

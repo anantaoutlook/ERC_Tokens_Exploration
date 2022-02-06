@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Token holders address and their other possessions</h2>
+<hr>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>address</th>
+        <th>coin</th>
+        <th>balance</th>
+        <th>share</th>
+        <th>Other holdings[[Token Address, Coin, Market Share  ]]</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for x in users %}
+        <tr>
+            <td>{{x[0]}}</td>
+            <td>{{x[1]}}</td>
+            <td>{{x[2]}}</td>
+            <td>{{x[3]}}</td>
+            <td>{{x[4]}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+  </table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+          null,
+          {orderable: false, searchable: false},
+          {searchable: false},
+          {orderable: false, searchable: false},
+          {orderable: false, searchable: false},
+          ],
+      });
+    });
+  </script>
+{% endblock %}
